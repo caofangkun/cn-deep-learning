@@ -1,6 +1,11 @@
 .ipynb_checkpoints/
 image-classification/__pycache__
 image-classification/cifar-10-batches-py
+image-classification/checkpoint
+image-classification/image_classification.data-00000-of-00001
+image-classification/image_classification.index
+image-classification/image_classification.meta
+
 *.p
 *.gz
 tv-script-generation/__pycache__
