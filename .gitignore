@@ -8,4 +8,10 @@ image-classification/image_classification.meta
 
 *.p
 *.gz
+*.pyc
 tv-script-generation/__pycache__
+tv-script-generation/checkpoint
+tv-script-generation/save.data-00000-of-00001
+tv-script-generation/save.index
+tv-script-generation/save.meta
+
