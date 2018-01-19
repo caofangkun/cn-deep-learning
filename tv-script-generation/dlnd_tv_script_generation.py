@@ -235,37 +235,9 @@ def get_init_cell(batch_size, rnn_size):
     :return: Tuple (cell, initialize state)
     """
     # TODO: Implement Function
-    num_layers = 2
-    keep_prob = 0.5
-    stack_drop = []
-    rnn_hidden_size=100
-    
-    ### solution zero
-    #rnn_cell1 = tf.contrib.rnn.BasicLSTMCell(512)
-    #run_cell2 = tf.contrib.rnn.BasicLSTMCell(556)
-    #stack_rnn = [rnn_cell1]
-    #for i in range(1, 3):
-    #    stack_rnn.append(run_cell2)
-    #cell = tf.contrib.rnn.MultiRNNCell(stack_rnn, state_is_tuple = True)
-    
-    lstm_cells = [tf.contrib.rnn.LSTMCell(rnn_hidden_size, forget_bias=1.0) for _ in range(num_layers)]
-    cell = tf.contrib.rnn.MultiRNNCell(lstm_cells)
-    
-    ### solution one
-    #base_cell = tf.contrib.rnn.GRUCell(num_units=rnn_hidden_size,)
-    #cell = tf.nn.rnn_cell.MultiRNNCell([base_cell for _ in range(num_layers)], state_is_tuple=False) 
-
-    # solution two
-    #for i in range(num_layers):
-    #    lstm = tf.contrib.rnn.BasicLSTMCell(rnn_size)
-    #    drop = tf.contrib.rnn.DropoutWrapper(lstm, output_keep_prob=keep_prob)
-    #    stack_drop.append(drop)
-    #cell = tf.nn.rnn_cell.MultiRNNCell(stack_drop, state_is_tuple=True)
-
-    # solution three    
-    #lstm = tf.contrib.rnn.BasicLSTMCell(rnn_size)
-    #cell = tf.contrib.rnn.MultiRNNCell([lstm]  * 2)
-    #cell = tf.contrib.rnn.MultiRNNCell([drop for i in range(num_layers)])
+     
+    lstm = tf.contrib.rnn.BasicLSTMCell(rnn_size)
+    cell = tf.contrib.rnn.MultiRNNCell([lstm] * 2)
 
     initial_state = cell.zero_state(batch_size, tf.float32)
     initial_state = tf.identity(initial_state, "initial_state")
@@ -354,10 +326,15 @@ def build_nn(cell, rnn_size, input_data, vocab_size, embed_dim):
     :return: Tuple (Logits, FinalState)
     """ 
     # TODO: Implement Function
-    embed  = get_embed(input_data, vocab_size, rnn_size)
-    output, final_state = build_rnn(cell, embed)
-    logits = tf.contrib.layers.fully_connected(output, num_outputs=vocab_size, activation_fn=None)
-    return logits, final_state
+    rnn_input = get_embed(input_data, vocab_size, embed_dim) 
+    rnn, rnn_out = build_rnn(cell, rnn_input)
+    nn_out = tf.contrib.layers.fully_connected(
+        rnn,
+        vocab_size,
+        weights_initializer=tf.truncated_normal_initializer(stddev=0.1),
+        biases_initializer=tf.zeros_initializer(),
+        activation_fn=None,)
+    return nn_out, rnn_out
         
 
 """
@@ -449,15 +426,15 @@ num_epochs = 100
 # Batch Size
 batch_size = 128
 # RNN Size
-rnn_size = 256
+rnn_size = 1024
 # Embedding Dimension Size
 embed_dim = 200
 # Sequence Length
-seq_length = 20
+seq_length = 64
 # Learning Rate
-learning_rate = 0.01
+learning_rate = 0.001
 # Show stats for every n number of batches
-show_every_n_batches = 100
+show_every_n_batches = 10
 
 """
 DON'T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE
@@ -608,7 +585,7 @@ tests.test_get_tensors(get_tensors)
 # ### Choose Word
 # Implement the `pick_word()` function to select the next word using `probabilities`.
 
-# In[28]:
+# In[22]:
 
 
 def pick_word(probabilities, int_to_vocab):
@@ -634,7 +611,7 @@ tests.test_pick_word(pick_word)
 # ## Generate TV Script
 # This will generate the TV script for you.  Set `gen_length` to the length of TV script you want to generate.
 
-# In[30]:
+# In[24]:
 
 
 gen_length = 200
@@ -668,8 +645,7 @@ with tf.Session(graph=loaded_graph) as sess:
             [probs, final_state],
             {input_text: dyn_input, initial_state: prev_state})
         
-        pred_word = pick_word(probabilities[0,dyn_seq_length-1,:], int_to_vocab)
-
+        pred_word = pick_word(probabilities[dyn_seq_length-1], int_to_vocab)
         gen_sentences.append(pred_word)
     
     # Remove tokens

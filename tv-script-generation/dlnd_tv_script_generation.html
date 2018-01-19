@@ -11786,7 +11786,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">helper</span>
@@ -11816,28 +11816,28 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">view_sentence_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">view_sentence_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dataset Stats&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Roughly the number of unique words: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">({</span><span class="n">word</span><span class="p">:</span> <span class="kc">None</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()})))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Dataset Stats&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Roughly the number of unique words: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">({</span><span class="n">word</span><span class="p">:</span> <span class="bp">None</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()})))</span>
 <span class="n">scenes</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of scenes: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">scenes</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Number of scenes: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">scenes</span><span class="p">)))</span>
 <span class="n">sentence_count_scene</span> <span class="o">=</span> <span class="p">[</span><span class="n">scene</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">scene</span> <span class="ow">in</span> <span class="n">scenes</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average number of sentences in each scene: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">sentence_count_scene</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Average number of sentences in each scene: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">sentence_count_scene</span><span class="p">)))</span>
 
 <span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">sentence</span> <span class="k">for</span> <span class="n">scene</span> <span class="ow">in</span> <span class="n">scenes</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">scene</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Number of lines: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Number of lines: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sentences</span><span class="p">)))</span>
 <span class="n">word_count_sentence</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">())</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average number of words in each line: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">word_count_sentence</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Average number of words in each line: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">word_count_sentence</span><span class="p">)))</span>
 
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The sentences </span><span class="si">{}</span><span class="s1"> to </span><span class="si">{}</span><span class="s1">:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">view_sentence_range</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)[</span><span class="n">view_sentence_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">view_sentence_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;The sentences {} to {}:&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">*</span><span class="n">view_sentence_range</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)[</span><span class="n">view_sentence_range</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">view_sentence_range</span><span class="p">[</span><span class="mi">1</span><span class="p">]]))</span>
 </pre></div>
 
 </div>
@@ -11857,11 +11857,12 @@ div#notebook {
 <pre>Dataset Stats
 Roughly the number of unique words: 11492
 Number of scenes: 262
-Average number of sentences in each scene: 15.248091603053435
-Number of lines: 4257
-Average number of words in each line: 11.50434578341555
-
+Average number of sentences in each scene: 15.2519083969
+Number of lines: 4258
+Average number of words in each line: 11.5016439643
+()
 The sentences 0 to 10:
+
 Moe_Szyslak: (INTO PHONE) Moe&#39;s Tavern. Where the elite meet to drink.
 Bart_Simpson: Eh, yeah, hello, is Mike there? Last name, Rotch.
 Moe_Szyslak: (INTO PHONE) Hold on, I&#39;ll check. (TO BARFLIES) Mike Rotch. Mike Rotch. Hey, has anybody seen Mike Rotch, lately?
@@ -11870,7 +11871,6 @@ Moe_Szyslak: What&#39;s the matter Homer? You&#39;re not your normal effervescen
 Homer_Simpson: I got my problems, Moe. Give me another one.
 Moe_Szyslak: Homer, hey, you should not drink to forget your problems.
 Barney_Gumble: Yeah, you should only drink to enhance your social skills.
-
 
 </pre>
 </div>
@@ -11904,9 +11904,9 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">problem_unittests</span> <span class="k">as</span> <span class="nn">tests</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">problem_unittests</span> <span class="kn">as</span> <span class="nn">tests</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
 
 <span class="k">def</span> <span class="nf">create_lookup_tables</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -11916,7 +11916,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
     <span class="n">count</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-    <span class="n">vocab</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="n">get</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">vocab</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">count</span><span class="p">,</span> <span class="n">key</span> <span class="o">=</span> <span class="n">count</span><span class="o">.</span><span class="n">get</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
     <span class="n">vocab_to_int</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vocab</span><span class="p">)}</span>
     <span class="n">int_to_vocab</span> <span class="o">=</span> <span class="p">{</span><span class="n">vocab</span><span class="p">:</span> <span class="n">c</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">vocab</span> <span class="ow">in</span> <span class="n">vocab_to_int</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
     <span class="k">return</span> <span class="n">vocab_to_int</span><span class="p">,</span> <span class="n">int_to_vocab</span>
@@ -11979,7 +11979,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">token_lookup</span><span class="p">():</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">token_lookup</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generate a dict to turn punctuation into a token.</span>
 <span class="sd">    :return: Tokenize dictionary where the key is the punctuation and the value is the token</span>
@@ -12033,7 +12033,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="c1"># Preprocess Training, Validation, and Testing Data</span>
@@ -12059,12 +12059,12 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">helper</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">problem_unittests</span> <span class="k">as</span> <span class="nn">tests</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">problem_unittests</span> <span class="kn">as</span> <span class="nn">tests</span>
 
 <span class="n">int_text</span><span class="p">,</span> <span class="n">vocab_to_int</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">,</span> <span class="n">token_dict</span> <span class="o">=</span> <span class="n">helper</span><span class="o">.</span><span class="n">load_preprocess</span><span class="p">()</span>
 </pre></div>
@@ -12096,22 +12096,22 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">distutils.version</span> <span class="k">import</span> <span class="n">LooseVersion</span>
+<span class="kn">from</span> <span class="nn">distutils.version</span> <span class="kn">import</span> <span class="n">LooseVersion</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
-<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
 
 <span class="c1"># Check TensorFlow Version</span>
 <span class="k">assert</span> <span class="n">LooseVersion</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">LooseVersion</span><span class="p">(</span><span class="s1">&#39;1.0&#39;</span><span class="p">),</span> <span class="s1">&#39;Please use TensorFlow version 1.0 or newer&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;TensorFlow Version: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;TensorFlow Version: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
 
 <span class="c1"># Check for a GPU</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">tf</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">gpu_device_name</span><span class="p">():</span>
     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;No GPU found. Please use a GPU to train your neural network.&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Default GPU Device: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">gpu_device_name</span><span class="p">()))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Default GPU Device: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">gpu_device_name</span><span class="p">()))</span>
 </pre></div>
 
 </div>
@@ -12128,7 +12128,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>TensorFlow Version: 1.3.0
+<pre>TensorFlow Version: 1.0.0
 </pre>
 </div>
 </div>
@@ -12139,7 +12139,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/ablecao/anaconda2/envs/dlnd/lib/python3.6/site-packages/ipykernel_launcher.py:14: UserWarning: No GPU found. Please use a GPU to train your neural network.
+<pre>/home/ablecao/anaconda2/lib/python2.7/site-packages/ipykernel_launcher.py:14: UserWarning: No GPU found. Please use a GPU to train your neural network.
   
 </pre>
 </div>
@@ -12169,14 +12169,14 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_inputs</span><span class="p">():</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_inputs</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create TF Placeholders for input, targets, and learning rate.</span>
 <span class="sd">    :return: Tuple (input, targets, learning rate)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="n">inputs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;input&#39;</span><span class="p">)</span>
-    <span class="n">targets</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;targets&#39;</span><span class="p">)</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;input&#39;</span><span class="p">)</span>
+    <span class="n">targets</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">],</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;targets&#39;</span><span class="p">)</span>
     <span class="n">learning_rate</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;learning_rate&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">learning_rate</span>
 
@@ -12232,7 +12232,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_init_cell</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_init_cell</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create an RNN Cell and initialize it.</span>
 <span class="sd">    :param batch_size: Size of batches</span>
@@ -12240,37 +12240,9 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <span class="sd">    :return: Tuple (cell, initialize state)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="n">num_layers</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="n">keep_prob</span> <span class="o">=</span> <span class="mf">0.5</span>
-    <span class="n">stack_drop</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">rnn_hidden_size</span><span class="o">=</span><span class="mi">100</span>
-    
-    <span class="c1">### solution zero</span>
-    <span class="c1">#rnn_cell1 = tf.contrib.rnn.BasicLSTMCell(512)</span>
-    <span class="c1">#run_cell2 = tf.contrib.rnn.BasicLSTMCell(556)</span>
-    <span class="c1">#stack_rnn = [rnn_cell1]</span>
-    <span class="c1">#for i in range(1, 3):</span>
-    <span class="c1">#    stack_rnn.append(run_cell2)</span>
-    <span class="c1">#cell = tf.contrib.rnn.MultiRNNCell(stack_rnn, state_is_tuple = True)</span>
-    
-    <span class="n">lstm_cells</span> <span class="o">=</span> <span class="p">[</span><span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">LSTMCell</span><span class="p">(</span><span class="n">rnn_hidden_size</span><span class="p">,</span> <span class="n">forget_bias</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)]</span>
-    <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">(</span><span class="n">lstm_cells</span><span class="p">)</span>
-    
-    <span class="c1">### solution one</span>
-    <span class="c1">#base_cell = tf.contrib.rnn.GRUCell(num_units=rnn_hidden_size,)</span>
-    <span class="c1">#cell = tf.nn.rnn_cell.MultiRNNCell([base_cell for _ in range(num_layers)], state_is_tuple=False) </span>
-
-    <span class="c1"># solution two</span>
-    <span class="c1">#for i in range(num_layers):</span>
-    <span class="c1">#    lstm = tf.contrib.rnn.BasicLSTMCell(rnn_size)</span>
-    <span class="c1">#    drop = tf.contrib.rnn.DropoutWrapper(lstm, output_keep_prob=keep_prob)</span>
-    <span class="c1">#    stack_drop.append(drop)</span>
-    <span class="c1">#cell = tf.nn.rnn_cell.MultiRNNCell(stack_drop, state_is_tuple=True)</span>
-
-    <span class="c1"># solution three    </span>
-    <span class="c1">#lstm = tf.contrib.rnn.BasicLSTMCell(rnn_size)</span>
-    <span class="c1">#cell = tf.contrib.rnn.MultiRNNCell([lstm]  * 2)</span>
-    <span class="c1">#cell = tf.contrib.rnn.MultiRNNCell([drop for i in range(num_layers)])</span>
+     
+    <span class="n">lstm</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">BasicLSTMCell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">)</span>
+    <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">([</span><span class="n">lstm</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
 
     <span class="n">initial_state</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">zero_state</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
     <span class="n">initial_state</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">initial_state</span><span class="p">,</span> <span class="s2">&quot;initial_state&quot;</span><span class="p">)</span>
@@ -12319,7 +12291,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_embed</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_embed</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create embedding for &lt;input_data&gt;.</span>
 <span class="sd">    :param input_data: TF placeholder for text input.</span>
@@ -12383,7 +12355,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">build_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create a RNN using a RNN Cell</span>
 <span class="sd">    :param cell: RNN Cell</span>
@@ -12391,7 +12363,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <span class="sd">    :return: Tuple (Outputs, Final State)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
-    <span class="n">outputs</span><span class="p">,</span> <span class="n">final_state</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dynamic_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span><span class="n">time_major</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">outputs</span><span class="p">,</span> <span class="n">final_state</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dynamic_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span><span class="n">time_major</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
     <span class="n">final_state</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">final_state</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;final_state&#39;</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">outputs</span><span class="p">,</span> <span class="n">final_state</span>
@@ -12445,7 +12417,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_nn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">,</span> <span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">build_nn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">,</span> <span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Build part of the neural network</span>
 <span class="sd">    :param cell: RNN cell</span>
@@ -12456,10 +12428,15 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <span class="sd">    :return: Tuple (Logits, FinalState)</span>
 <span class="sd">    &quot;&quot;&quot;</span> 
     <span class="c1"># TODO: Implement Function</span>
-    <span class="n">embed</span>  <span class="o">=</span> <span class="n">get_embed</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">)</span>
-    <span class="n">output</span><span class="p">,</span> <span class="n">final_state</span> <span class="o">=</span> <span class="n">build_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">embed</span><span class="p">)</span>
-    <span class="n">logits</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">fully_connected</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">num_outputs</span><span class="o">=</span><span class="n">vocab_size</span><span class="p">,</span> <span class="n">activation_fn</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">logits</span><span class="p">,</span> <span class="n">final_state</span>
+    <span class="n">rnn_input</span> <span class="o">=</span> <span class="n">get_embed</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">)</span> 
+    <span class="n">rnn</span><span class="p">,</span> <span class="n">rnn_out</span> <span class="o">=</span> <span class="n">build_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">rnn_input</span><span class="p">)</span>
+    <span class="n">nn_out</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">fully_connected</span><span class="p">(</span>
+        <span class="n">rnn</span><span class="p">,</span>
+        <span class="n">vocab_size</span><span class="p">,</span>
+        <span class="n">weights_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">),</span>
+        <span class="n">biases_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">zeros_initializer</span><span class="p">(),</span>
+        <span class="n">activation_fn</span><span class="o">=</span><span class="bp">None</span><span class="p">,)</span>
+    <span class="k">return</span> <span class="n">nn_out</span><span class="p">,</span> <span class="n">rnn_out</span>
         
 
 <span class="sd">&quot;&quot;&quot;</span>
@@ -12529,7 +12506,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_batches</span><span class="p">(</span><span class="n">int_text</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_length</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_batches</span><span class="p">(</span><span class="n">int_text</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_length</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Return batches of input and target</span>
 <span class="sd">    :param int_text: Text with the words replaced by their ids</span>
@@ -12607,20 +12584,20 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Number of Epochs</span>
 <span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="c1"># Batch Size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="c1"># RNN Size</span>
-<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">1024</span>
 <span class="c1"># Embedding Dimension Size</span>
 <span class="n">embed_dim</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="c1"># Sequence Length</span>
-<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">seq_length</span> <span class="o">=</span> <span class="mi">64</span>
 <span class="c1"># Learning Rate</span>
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
 <span class="c1"># Show stats for every n number of batches</span>
-<span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -12647,10 +12624,10 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">from</span> <span class="nn">tensorflow.contrib</span> <span class="k">import</span> <span class="n">seq2seq</span>
+<span class="kn">from</span> <span class="nn">tensorflow.contrib</span> <span class="kn">import</span> <span class="n">seq2seq</span>
 
 <span class="n">train_graph</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
 <span class="k">with</span> <span class="n">train_graph</span><span class="o">.</span><span class="n">as_default</span><span class="p">():</span>
@@ -12674,7 +12651,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 
     <span class="c1"># Gradient Clipping</span>
     <span class="n">gradients</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">compute_gradients</span><span class="p">(</span><span class="n">cost</span><span class="p">)</span>
-    <span class="n">capped_gradients</span> <span class="o">=</span> <span class="p">[(</span><span class="n">tf</span><span class="o">.</span><span class="n">clip_by_value</span><span class="p">(</span><span class="n">grad</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span> <span class="n">var</span><span class="p">)</span> <span class="k">for</span> <span class="n">grad</span><span class="p">,</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">gradients</span> <span class="k">if</span> <span class="n">grad</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+    <span class="n">capped_gradients</span> <span class="o">=</span> <span class="p">[(</span><span class="n">tf</span><span class="o">.</span><span class="n">clip_by_value</span><span class="p">(</span><span class="n">grad</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span> <span class="n">var</span><span class="p">)</span> <span class="k">for</span> <span class="n">grad</span><span class="p">,</span> <span class="n">var</span> <span class="ow">in</span> <span class="n">gradients</span> <span class="k">if</span> <span class="n">grad</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">]</span>
     <span class="n">train_op</span> <span class="o">=</span> <span class="n">optimizer</span><span class="o">.</span><span class="n">apply_gradients</span><span class="p">(</span><span class="n">capped_gradients</span><span class="p">)</span>
 </pre></div>
 
@@ -12697,7 +12674,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="n">batches</span> <span class="o">=</span> <span class="n">get_batches</span><span class="p">(</span><span class="n">int_text</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_length</span><span class="p">)</span>
@@ -12718,7 +12695,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 
             <span class="c1"># Show every &lt;show_every_n_batches&gt; batches</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">epoch_i</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">batches</span><span class="p">)</span> <span class="o">+</span> <span class="n">batch_i</span><span class="p">)</span> <span class="o">%</span> <span class="n">show_every_n_batches</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Epoch </span><span class="si">{:&gt;3}</span><span class="s1"> Batch </span><span class="si">{:&gt;4}</span><span class="s1">/</span><span class="si">{}</span><span class="s1">   train_loss = </span><span class="si">{:.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Epoch {:&gt;3} Batch {:&gt;4}/{}   train_loss = {:.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                     <span class="n">epoch_i</span><span class="p">,</span>
                     <span class="n">batch_i</span><span class="p">,</span>
                     <span class="nb">len</span><span class="p">(</span><span class="n">batches</span><span class="p">),</span>
@@ -12727,7 +12704,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
     <span class="c1"># Save Model</span>
     <span class="n">saver</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">Saver</span><span class="p">()</span>
     <span class="n">saver</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">sess</span><span class="p">,</span> <span class="n">save_dir</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Model Trained and Saved&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Model Trained and Saved&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12744,32 +12721,86 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch    0/26   train_loss = 8.822
-Epoch   3 Batch   22/26   train_loss = 6.131
-Epoch   7 Batch   18/26   train_loss = 5.820
-Epoch  11 Batch   14/26   train_loss = 5.304
-Epoch  15 Batch   10/26   train_loss = 4.723
-Epoch  19 Batch    6/26   train_loss = 4.445
-Epoch  23 Batch    2/26   train_loss = 4.041
-Epoch  26 Batch   24/26   train_loss = 3.628
-Epoch  30 Batch   20/26   train_loss = 3.388
-Epoch  34 Batch   16/26   train_loss = 3.219
-Epoch  38 Batch   12/26   train_loss = 2.974
-Epoch  42 Batch    8/26   train_loss = 2.771
-Epoch  46 Batch    4/26   train_loss = 2.649
-Epoch  50 Batch    0/26   train_loss = 2.396
-Epoch  53 Batch   22/26   train_loss = 2.225
-Epoch  57 Batch   18/26   train_loss = 2.100
-Epoch  61 Batch   14/26   train_loss = 2.035
-Epoch  65 Batch   10/26   train_loss = 1.960
-Epoch  69 Batch    6/26   train_loss = 1.820
-Epoch  73 Batch    2/26   train_loss = 1.843
-Epoch  76 Batch   24/26   train_loss = 1.702
-Epoch  80 Batch   20/26   train_loss = 1.622
-Epoch  84 Batch   16/26   train_loss = 1.636
-Epoch  88 Batch   12/26   train_loss = 1.495
-Epoch  92 Batch    8/26   train_loss = 1.418
-Epoch  96 Batch    4/26   train_loss = 1.535
+<pre>Epoch   0 Batch    0/8   train_loss = 8.821
+Epoch   1 Batch    2/8   train_loss = 6.923
+Epoch   2 Batch    4/8   train_loss = 6.149
+Epoch   3 Batch    6/8   train_loss = 6.004
+Epoch   5 Batch    0/8   train_loss = 5.875
+Epoch   6 Batch    2/8   train_loss = 5.857
+Epoch   7 Batch    4/8   train_loss = 5.719
+Epoch   8 Batch    6/8   train_loss = 5.530
+Epoch  10 Batch    0/8   train_loss = 5.306
+Epoch  11 Batch    2/8   train_loss = 5.288
+Epoch  12 Batch    4/8   train_loss = 5.080
+Epoch  13 Batch    6/8   train_loss = 4.892
+Epoch  15 Batch    0/8   train_loss = 4.778
+Epoch  16 Batch    2/8   train_loss = 4.771
+Epoch  17 Batch    4/8   train_loss = 4.582
+Epoch  18 Batch    6/8   train_loss = 4.421
+Epoch  20 Batch    0/8   train_loss = 4.295
+Epoch  21 Batch    2/8   train_loss = 4.327
+Epoch  22 Batch    4/8   train_loss = 4.203
+Epoch  23 Batch    6/8   train_loss = 4.063
+Epoch  25 Batch    0/8   train_loss = 3.947
+Epoch  26 Batch    2/8   train_loss = 3.952
+Epoch  27 Batch    4/8   train_loss = 3.768
+Epoch  28 Batch    6/8   train_loss = 3.620
+Epoch  30 Batch    0/8   train_loss = 3.526
+Epoch  31 Batch    2/8   train_loss = 3.514
+Epoch  32 Batch    4/8   train_loss = 3.321
+Epoch  33 Batch    6/8   train_loss = 3.189
+Epoch  35 Batch    0/8   train_loss = 3.110
+Epoch  36 Batch    2/8   train_loss = 3.083
+Epoch  37 Batch    4/8   train_loss = 2.935
+Epoch  38 Batch    6/8   train_loss = 2.781
+Epoch  40 Batch    0/8   train_loss = 2.677
+Epoch  41 Batch    2/8   train_loss = 2.610
+Epoch  42 Batch    4/8   train_loss = 2.474
+Epoch  43 Batch    6/8   train_loss = 2.354
+Epoch  45 Batch    0/8   train_loss = 2.290
+Epoch  46 Batch    2/8   train_loss = 2.216
+Epoch  47 Batch    4/8   train_loss = 2.073
+Epoch  48 Batch    6/8   train_loss = 2.014
+Epoch  50 Batch    0/8   train_loss = 1.925
+Epoch  51 Batch    2/8   train_loss = 1.836
+Epoch  52 Batch    4/8   train_loss = 1.709
+Epoch  53 Batch    6/8   train_loss = 1.625
+Epoch  55 Batch    0/8   train_loss = 1.579
+Epoch  56 Batch    2/8   train_loss = 1.450
+Epoch  57 Batch    4/8   train_loss = 1.271
+Epoch  58 Batch    6/8   train_loss = 1.192
+Epoch  60 Batch    0/8   train_loss = 1.145
+Epoch  61 Batch    2/8   train_loss = 1.015
+Epoch  62 Batch    4/8   train_loss = 0.908
+Epoch  63 Batch    6/8   train_loss = 0.838
+Epoch  65 Batch    0/8   train_loss = 0.780
+Epoch  66 Batch    2/8   train_loss = 0.692
+Epoch  67 Batch    4/8   train_loss = 0.610
+Epoch  68 Batch    6/8   train_loss = 0.584
+Epoch  70 Batch    0/8   train_loss = 0.547
+Epoch  71 Batch    2/8   train_loss = 0.478
+Epoch  72 Batch    4/8   train_loss = 0.414
+Epoch  73 Batch    6/8   train_loss = 0.370
+Epoch  75 Batch    0/8   train_loss = 0.320
+Epoch  76 Batch    2/8   train_loss = 0.272
+Epoch  77 Batch    4/8   train_loss = 0.237
+Epoch  78 Batch    6/8   train_loss = 0.222
+Epoch  80 Batch    0/8   train_loss = 0.203
+Epoch  81 Batch    2/8   train_loss = 0.189
+Epoch  82 Batch    4/8   train_loss = 0.174
+Epoch  83 Batch    6/8   train_loss = 0.169
+Epoch  85 Batch    0/8   train_loss = 0.155
+Epoch  86 Batch    2/8   train_loss = 0.144
+Epoch  87 Batch    4/8   train_loss = 0.136
+Epoch  88 Batch    6/8   train_loss = 0.134
+Epoch  90 Batch    0/8   train_loss = 0.129
+Epoch  91 Batch    2/8   train_loss = 0.121
+Epoch  92 Batch    4/8   train_loss = 0.116
+Epoch  93 Batch    6/8   train_loss = 0.116
+Epoch  95 Batch    0/8   train_loss = 0.113
+Epoch  96 Batch    2/8   train_loss = 0.105
+Epoch  97 Batch    4/8   train_loss = 0.101
+Epoch  98 Batch    6/8   train_loss = 0.103
 Model Trained and Saved
 </pre>
 </div>
@@ -12793,7 +12824,7 @@ Model Trained and Saved
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="c1"># Save parameters for checkpoint</span>
@@ -12818,13 +12849,13 @@ Model Trained and Saved
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">tensorflow</span> <span class="kn">as</span> <span class="nn">tf</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">helper</span>
-<span class="kn">import</span> <span class="nn">problem_unittests</span> <span class="k">as</span> <span class="nn">tests</span>
+<span class="kn">import</span> <span class="nn">problem_unittests</span> <span class="kn">as</span> <span class="nn">tests</span>
 
 <span class="n">_</span><span class="p">,</span> <span class="n">vocab_to_int</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">,</span> <span class="n">token_dict</span> <span class="o">=</span> <span class="n">helper</span><span class="o">.</span><span class="n">load_preprocess</span><span class="p">()</span>
 <span class="n">seq_length</span><span class="p">,</span> <span class="n">load_dir</span> <span class="o">=</span> <span class="n">helper</span><span class="o">.</span><span class="n">load_params</span><span class="p">()</span>
@@ -12856,7 +12887,7 @@ Model Trained and Saved
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get input, initial state, final state, and probabilities tensor from &lt;loaded_graph&gt;</span>
 <span class="sd">    :param loaded_graph: TensorFlow graph loaded from file</span>
@@ -12911,10 +12942,10 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Pick the next word in the generated text</span>
 <span class="sd">    :param probabilities: Probabilites of the next word</span>
@@ -12968,10 +12999,10 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">200</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="c1"># homer_simpson, moe_szyslak, or Barney_Gumble</span>
 <span class="n">prime_word</span> <span class="o">=</span> <span class="s1">&#39;moe_szyslak&#39;</span>
 
@@ -13002,8 +13033,7 @@ Model Trained and Saved
             <span class="p">[</span><span class="n">probs</span><span class="p">,</span> <span class="n">final_state</span><span class="p">],</span>
             <span class="p">{</span><span class="n">input_text</span><span class="p">:</span> <span class="n">dyn_input</span><span class="p">,</span> <span class="n">initial_state</span><span class="p">:</span> <span class="n">prev_state</span><span class="p">})</span>
         
-        <span class="n">pred_word</span> <span class="o">=</span> <span class="n">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">dyn_seq_length</span><span class="o">-</span><span class="mi">1</span><span class="p">,:],</span> <span class="n">int_to_vocab</span><span class="p">)</span>
-
+        <span class="n">pred_word</span> <span class="o">=</span> <span class="n">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">[</span><span class="n">dyn_seq_length</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">int_to_vocab</span><span class="p">)</span>
         <span class="n">gen_sentences</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pred_word</span><span class="p">)</span>
     
     <span class="c1"># Remove tokens</span>
@@ -13014,7 +13044,7 @@ Model Trained and Saved
     <span class="n">tv_script</span> <span class="o">=</span> <span class="n">tv_script</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> &#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">tv_script</span> <span class="o">=</span> <span class="n">tv_script</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;( &#39;</span><span class="p">,</span> <span class="s1">&#39;(&#39;</span><span class="p">)</span>
         
-    <span class="nb">print</span><span class="p">(</span><span class="n">tv_script</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">tv_script</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13031,17 +13061,17 @@ Model Trained and Saved
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>INFO:tensorflow:Restoring parameters from ./save
-moe_szyslak: that was at everyone. no outside.(stagy) yes, god, the troll twins of springfield.
-moe_szyslak: homer, no. but i am in the bible. now what i need to find better than you, homer?
-bart_simpson: how did me at the&#34; flaming moe&#34; has no trouble.
-barney_gumble:(whistles) ew... what i&#39;ve love christmas!
-moe_szyslak: guys, i wish you&#39;re a big disappointment, before it&#39;s true, homer, i made that what i get marge in a favor.
-marge_simpson: not this perfect.
-agent_johnson: no, this is watered-down tape?
-barney_gumble: wait a minute.(then to springfield&#39;s twenty-five.
-homer_simpson:(suddenly early moe, disgusted yes, boy, i think a new bartender to prove god, i don&#39;t hit some kind.
-moe_szyslak: four out, eh? oh no, i hope you really am your fire, which i don&#39;t want to wear you you. think.(remembering fondly) but it was not some new grin work american--
+<pre>moe_szyslak: can you mean homer? homer, i didn&#39;t the thing?(now leans right, bart call this fragile.. a minute. have to uh... i know you made to me and seem your taxes of your life!
+homer_simpson:(bitterly) i&#39;ve all-- of this friend is loser! that&#39;s it!
+larry:(toasting)) that&#39;s right! help me!
+homer_simpson: there&#39;s a party and you&#39;re against the snake, icy house.(beat, or way) you, i&#39;m to take you with my kids.
+lenny_leonard: all right! it&#39;s me.
+moe_szyslak: yeah, i don&#39;t you invite valentine&#39;s day of day.
+moe_szyslak:(day) that&#39;s it, you&#39;re the secret one.
+moe_szyslak:(upset) no, the secret. he did you may get a space-time drink?
+lindsay_naegle:(moans) thing there&#39;s to buy them drink to give my job.
+moe_szyslak: i got a little idea. c&#39;mon. we use a manjula room...
+moe_szyslak: homer, you gotta take it
 </pre>
 </div>
 </div>
