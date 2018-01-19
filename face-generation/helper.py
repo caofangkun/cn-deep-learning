@@ -1,7 +1,10 @@
 import math
 import os
 import hashlib
-from urllib.requests import urlretrieve
+try:
+    from urllib.requests import urlretrieve
+except ImportError:
+    from urllib import urlretrieve
 import zipfile
 import gzip
 import shutil
