@@ -485,7 +485,7 @@ tests.test_seq2seq_model(seq2seq_model)
 # - 将 `learning_rate` 设为训练速率。
 # - 将 `keep_probability` 设为丢弃保留率（Dropout keep probability）。
 
-# In[14]:
+# In[17]:
 
 
 # Number of Epochs
@@ -497,8 +497,8 @@ rnn_size = 256
 # Number of Layers
 num_layers = 2
 # Embedding Size
-encoding_embedding_size = 32
-decoding_embedding_size = 32
+encoding_embedding_size = 256
+decoding_embedding_size = 256
 # Learning Rate
 learning_rate = 0.003
 # Dropout Keep Probability
@@ -509,7 +509,7 @@ keep_probability = 0.75
 # 
 # 使用你实现的神经网络构建图表。
 
-# In[15]:
+# In[18]:
 
 
 """
@@ -550,7 +550,7 @@ with train_graph.as_default():
 # 
 # 利用预处理的数据训练神经网络。如果很难获得低损失值，请访问我们的论坛，看看其他人是否遇到了相同的问题。
 
-# In[16]:
+# In[19]:
 
 
 """
@@ -621,7 +621,7 @@ with tf.Session(graph=train_graph) as sess:
 # 
 # 保存 `batch_size` 和 `save_path` 参数以进行推论（for inference）。
 
-# In[17]:
+# In[20]:
 
 
 """
@@ -633,7 +633,7 @@ helper.save_params(save_path)
 
 # # 检查点
 
-# In[18]:
+# In[21]:
 
 
 """
@@ -656,7 +656,7 @@ load_path = helper.load_params()
 # - 使用 `vocab_to_int` 将单词转换为 id
 #  - 如果单词不在词汇表中，将其转换为`<UNK>` 单词 id
 
-# In[19]:
+# In[22]:
 
 
 def sentence_to_seq(sentence, vocab_to_int):
@@ -688,7 +688,7 @@ tests.test_sentence_to_seq(sentence_to_seq)
 # 
 # 将 `translate_sentence` 从英语翻译成法语。
 
-# In[20]:
+# In[23]:
 
 
 translate_sentence = 'he saw a old yellow truck .'
