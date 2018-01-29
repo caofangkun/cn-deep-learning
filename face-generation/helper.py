@@ -196,8 +196,8 @@ class Dataset(object):
             image_channels = 3
 
         elif dataset_name == DATASET_MNIST_NAME:
-            self.image_mode = 'L'
-            image_channels = 1
+            self.image_mode = 'RGB'
+            image_channels = 3
 
         self.data_files = data_files
         self.shape = len(data_files), IMAGE_WIDTH, IMAGE_HEIGHT, image_channels
